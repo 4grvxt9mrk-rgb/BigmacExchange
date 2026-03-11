@@ -6,10 +6,9 @@ interface Props {
   value: string
   onChange: (code: string) => void
   entries: BigMacEntry[]
-  accentColor: string
 }
 
-export function CurrencySelector({ label, value, onChange, entries, accentColor }: Props) {
+export function CurrencySelector({ label, value, onChange, entries }: Props) {
   const sorted = [...entries].sort((a, b) => a.name.localeCompare(b.name))
   const selected = entries.find((e) => e.currency_code === value)
 

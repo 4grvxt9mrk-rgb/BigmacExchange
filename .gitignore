@@ -1,3 +1,6 @@
+# Tauri / Rust build output
+src-tauri/target/
+
 # Logs
 logs
 *.log

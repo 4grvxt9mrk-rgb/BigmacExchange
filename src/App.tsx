@@ -90,14 +90,12 @@ export default function App() {
                 value={currencyA}
                 onChange={setCurrencyA}
                 entries={entryList}
-                accentColor="#f59e0b"
               />
               <CurrencySelector
                 label="Currency B"
                 value={currencyB}
                 onChange={setCurrencyB}
                 entries={entryList}
-                accentColor="#818cf8"
               />
             </div>
 
