@@ -102,14 +102,28 @@ export default function App() {
             </div>
 
             {/* Explainer */}
-            <div className="rounded-xl border border-slate-800 bg-slate-900/40 px-4 py-3 text-xs text-slate-400 leading-relaxed">
-              <strong className="text-slate-300">How it works:</strong> The Big Mac Index compares
-              each country's Big Mac price (in USD) against the US price. If a Big Mac is cheaper
-              than in the US after conversion, the currency is <em>undervalued</em> — and vice versa.
-              The implied PPP rate is what the exchange rate <em>should</em> be for prices to equalise.
-              {useLiveRates
-                ? ' Live exchange rates are being used for current valuations.'
-                : ' Using survey-date exchange rates only.'}
+            <div className="rounded-xl border border-slate-800 bg-slate-900/40 px-4 py-3 text-xs text-slate-400 leading-relaxed flex flex-col gap-3">
+              <p>
+                <strong className="text-slate-300">How it works:</strong> The Big Mac Index compares
+                each country's Big Mac price (in USD) against the US price. If a Big Mac is cheaper
+                than in the US after conversion, the currency is <em>undervalued</em> — and vice versa.
+                The implied PPP rate is what the exchange rate <em>should</em> be for prices to equalise.
+                {useLiveRates
+                  ? ' Live exchange rates are being used for current valuations.'
+                  : ' Using survey-date exchange rates only.'}
+              </p>
+              <p>
+                <strong className="text-slate-300">Interpreting results:</strong> If a currency is{' '}
+                <span className="text-emerald-400">undervalued</span>, it buys less abroad than its
+                domestic purchasing power suggests it should — imports and overseas travel feel
+                expensive, and foreign assets cost more in local terms. Governments sometimes
+                tolerate this to keep exports competitive.{' '}
+                <span className="text-red-400">Overvalued</span> means the opposite: the currency
+                punches above its weight, making foreign goods and travel cheaper but potentially
+                hurting exporters. For the A/B cross-rate, the same logic applies between the two
+                selected currencies — if A is undervalued vs B, goods priced in B cost more than
+                the Big Mac benchmark suggests is fair.
+              </p>
             </div>
 
             {/* Chart */}
